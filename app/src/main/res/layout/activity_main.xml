@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+        android:textSize="50dp" />
+    <RelativeLayout
+        android:id="@+id/relativeL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="37dp"
+        android:orientation="vertical"
+        tools:context="com.example.queen.saediproject.MainActivity">
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/createAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="11dp"
+            android:layout_centerHorizontal="true"
+            android:text="CREATE AN PROFILE"
+            android:textColor="@color/colorPurple"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createAccount"
+            android:layout_marginTop="16dp"
+            android:text="First Name"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editText_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/text_firstName"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Antodo@gmail.com"
+            android:inputType="none"
+            android:paddingLeft="20dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text_lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_firstName"
+            android:layout_marginTop="16dp"
+            android:text="Last Name"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editText_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/text_lastName"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Type your password"
+            android:paddingLeft="20dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_lastName"
+            android:layout_marginTop="16dp"
+            android:text="Phone Number"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editText_phoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/text_phone_no"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Repeat your password"
+            android:paddingLeft="20dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_phoneNo"
+            android:layout_marginTop="16dp"
+            android:text="Address"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editText_address"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/text_Address"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Phone Number and Name"
+            android:paddingLeft="20dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/editText_city"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/editText_address"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="City and Country"
+            android:paddingLeft="20dp"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_city"
+            android:layout_marginTop="22dp"
+            android:text="I Agree To The Terms And Conditions"
+            android:textColor="#313233" />
+
+        <Button
+            android:id="@+id/btn_createProfile"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/checkBox"
+            android:background="@drawable/my_button"
+            android:text="Create Profile"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

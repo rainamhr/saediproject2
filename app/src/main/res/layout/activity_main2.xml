@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.queen.saediproject.Main2Activity"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="109dp"
+            android:layout_height="110dp"
+            android:layout_above="@+id/textabove"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:src="@drawable/eclll" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/vectodjectcopy" />
+
+        <TextView
+            android:id="@+id/textabove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textabove1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="Good Morning!"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textabove1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textabove2"
+            android:layout_centerHorizontal="true"
+            android:text="@string/luck"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textabove2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text="@string/left"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="34dp"
+            android:background="@drawable/my_button1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="How are you feeling today? +"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_forTask"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/relative1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Today's Agenda"
+            android:textColor="@color/blue"
+            android:textSize="23dp" />
+    </RelativeLayout>
+
+        <ScrollView
+             android:layout_below="@+id/relative_forTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/relativeLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#88c2c0c0" />
+
+        <View
+            android:layout_below="@id/view"
+            android:layout_alignLeft="@+id/text2"
+            android:background="@color/red"
+            android:layout_width="2dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="20dp"
+        android:layout_below="@+id/view"
+        android:text="Meeting at 3pm with Rakura Tea"
+        android:textColor="@color/colorPurple"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/View2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text2"
+        android:background="#88c2c0c0" />
+
+        <View
+            android:layout_below="@id/View2"
+            android:layout_alignLeft="@+id/text2"
+            android:background="@color/green"
+            android:layout_width="2dp"
+            android:layout_height="50dp"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/View2"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:text="Complete Serene Resort Brochure Design"
+        android:textColor="@color/colorPurple"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/View3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text3"
+        android:background="#88c2c0c0" />
+
+        <View
+            android:layout_below="@id/View3"
+            android:layout_alignLeft="@+id/text2"
+            android:background="@color/red"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:id="@+id/view2" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/View3"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:text="Brief team on new concept designs"
+        android:textColor="@color/colorPurple"
+        android:textSize="15dp" />
+
+    <View
+        android:id="@+id/View4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text4"
+        android:background="#88c2c0c0" />
+
+        <View
+            android:layout_below="@id/View4"
+            android:layout_alignLeft="@+id/text5"
+            android:background="@drawable/sideline_green"
+            android:layout_width="2dp"
+            android:layout_height="42dp"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/View4"
+        android:background="@color/lightGreen"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:text="Handover at 6pm today"
+        android:textColor="@color/colorPurple"
+        android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+    <LinearLayout
+        android:id="@+id/LINEAR_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/relative_forhome"
+            android:background="@color/colorPurple"
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbtn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPurple"
+                android:paddingLeft="40dp"
+                android:text="Go to Home"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+            <TextView
+                android:layout_toRightOf="@+id/lbtn_1"
+                android:id="@+id/gotohome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:textAllCaps="false"
+                android:background="@color/colorPurple"
+                android:text="Go to Home"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:background="#88c2c0c0"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_forwork"
+            android:background="@color/colorPurple"
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbtn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPurple"
+                android:paddingLeft="40dp"
+                android:text="lets work"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+            <TextView
+                android:layout_toRightOf="@+id/lbtn_2"
+                android:id="@+id/letswork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:background="@color/colorPurple"
+                android:text="Let's Work"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

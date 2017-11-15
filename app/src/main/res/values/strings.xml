@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Designs</string>
+    <string name="use">Good Morning!</string>
+    <string name="luck">"Luck is what you have </string>
+    <string name="left">left over after you give 100%"</string>
+    <string name="and">Find the perfect \n you with tasks \n &amp; Management</string>
+    <string name="title_activity_navigation_drawer">Antodo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

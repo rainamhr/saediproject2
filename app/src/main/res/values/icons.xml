@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_fa_chevron_left">&#xf053;</string>
+    <string name="fa_home">&#xf015;</string>
+    <string name="fa_book">&#xf02d;</string>
+    <string name="fa_icon_linechart">&#xf201;</string>
+</resources>

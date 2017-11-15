@@ -1,0 +1,35 @@
+package com.example.queen.saediproject.API.Model;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+/**
+ * Created by sikshya on 11/9/17.
+ */
+
+public class WpFeaturedmedium {
+
+    @SerializedName("embeddable")
+    @Expose
+    private Boolean embeddable;
+    @SerializedName("href")
+    @Expose
+    private String href;
+
+    public Boolean getEmbeddable() {
+        return embeddable;
+    }
+
+    public void setEmbeddable(Boolean embeddable) {
+        this.embeddable = embeddable;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
+    }
+
+}
