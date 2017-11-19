@@ -37,7 +37,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+/*
         Thread myThread = new Thread() {
 
             @SuppressLint("ResourceType")
@@ -53,7 +53,7 @@ public class Main2Activity extends AppCompatActivity {
                 }
             }
         };
-        myThread.start();
+        myThread.start();*/
 
         textabove = findViewById(R.id.textabove);
         textabove1 = findViewById(R.id.textabove1);
