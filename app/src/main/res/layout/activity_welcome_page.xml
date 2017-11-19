@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.queen.saediproject.welcomePageActivity">
+    tools:context="com.example.queen.saediproject.Fragment.welcomePageFragment">
 
     <ImageView
         android:id="@+id/imgforwelcome"
@@ -45,7 +45,7 @@
         android:layout_marginRight="50dp"/>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/button_login"
         android:layout_below="@+id/welcomeNote"
         android:layout_width="match_parent"
         android:layout_marginTop="150dp"
@@ -56,13 +56,14 @@
         android:text="Login"
         android:textColor="#fff" />
 
-    <ImageView
+    <TextView
         android:id="@+id/terms"
-        android:layout_below="@id/btn_login"
-        android:layout_width="100dp"
+        android:layout_below="@id/button_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/termsandcondition"/>
+        android:text="@string/termsand"
+        android:textColor="@color/blue"/>
 
 </RelativeLayout>

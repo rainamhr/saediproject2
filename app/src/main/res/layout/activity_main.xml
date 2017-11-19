@@ -42,7 +42,7 @@
             android:layout_below="@+id/imageView"
             android:layout_marginTop="11dp"
             android:layout_centerHorizontal="true"
-            android:text="CREATE AN PROFILE"
+            android:text="CREATE YOUR PROFILE"
             android:textColor="@color/colorPurple"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -63,7 +63,7 @@
             android:layout_below="@+id/text_firstName"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Antodo@gmail.com"
+            android:hint="First Name"
             android:inputType="none"
             android:paddingLeft="20dp"
             android:textSize="15dp" />
@@ -84,7 +84,7 @@
             android:layout_below="@+id/text_lastName"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Type your password"
+            android:hint="Last Name"
             android:paddingLeft="20dp"
             android:textSize="15dp" />
 
@@ -104,7 +104,7 @@
             android:layout_below="@+id/text_phone_no"
             android:layout_marginTop="23dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Repeat your password"
+            android:hint="Phone No."
             android:paddingLeft="20dp"
             android:textSize="15dp" />
 
@@ -124,7 +124,7 @@
             android:layout_below="@+id/text_Address"
             android:layout_marginTop="18dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="Phone Number and Name"
+            android:hint="City"
             android:paddingLeft="20dp"
             android:textSize="15dp" />
 
@@ -135,7 +135,7 @@
             android:layout_below="@+id/editText_address"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="City and Country"
+            android:hint="Country"
             android:paddingLeft="20dp"
             android:textSize="15dp" />
 
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/editText_city"
             android:layout_marginTop="22dp"
-            android:text="I Agree To The Terms And Conditions"
+            android:text="@string/terms"
             android:textColor="#313233" />
 
         <Button

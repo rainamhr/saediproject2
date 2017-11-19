@@ -9,9 +9,22 @@ import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     TextView mcreateAccount;
@@ -20,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mphoneNo;
     TextView maddress;
     Button mbtn_create;
+    RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +56,44 @@ public class MainActivity extends AppCompatActivity {
         mphoneNo.setTypeface(custon_font_1);;
         maddress.setTypeface(custon_font_1);
         mbtn_create.setTypeface(custon_font_1);
+        queue = Volley.newRequestQueue(this);
 
         mbtn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, navigationDrawer.class);
-                startActivity(intent);
+                final StringRequest postRequest = new StringRequest(Request.Method.POST, "http://saediworks.co/vishal/anttodo/wp-json/jwt-auth/v1/token",
+                        new Response.Listener<String>()
+                        {
+                            @Override
+                            public void onResponse(String response) {
+
+                                Log.d("Response", response);
+                            }
+                        },
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Log.d("Error.Response", String.valueOf(error));
+                            }
+                        }
+                ) {
+                    @Override
+                    protected Map<String, String> getParams()
+                    {
+                        Map<String, String>  params = new HashMap<String, String>();
+                        params.put("username", "admin");
+                        params.put("password", "password");
+
+                        return params;
+                    }
+                };
+                queue.add(postRequest);
+
+                /*Intent intent = new Intent(MainActivity.this, navigationDrawer.class);
+                startActivity(intent);*/
             }
         });
-
 
     }
 }
