@@ -13,21 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Main2Activity"
-            android:theme="@style/SplashTheme"/>
+        <activity android:name=".Main2Activity" />
         <activity android:name=".display2" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".MyFeeling" />
-        <activity android:name=".loginActivity" />
+        <activity android:name=".loginActivity"></activity>
         <activity
             android:name=".navigationDrawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ViewPagerActivity">
-        </activity>
-        <activity
-            android:name=".mainSTartingActivity">
-          <intent-filter>
+        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".mainStart"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

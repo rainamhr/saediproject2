@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -61,39 +62,13 @@ public class MainActivity extends AppCompatActivity {
         mbtn_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final StringRequest postRequest = new StringRequest(Request.Method.POST, "http://saediworks.co/vishal/anttodo/wp-json/jwt-auth/v1/token",
-                        new Response.Listener<String>()
-                        {
-                            @Override
-                            public void onResponse(String response) {
-
-                                Log.d("Response", response);
-                            }
-                        },
-                        new Response.ErrorListener()
-                        {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Log.d("Error.Response", String.valueOf(error));
-                            }
-                        }
-                ) {
-                    @Override
-                    protected Map<String, String> getParams()
-                    {
-                        Map<String, String>  params = new HashMap<String, String>();
-                        params.put("username", "admin");
-                        params.put("password", "password");
-
-                        return params;
-                    }
-                };
-                queue.add(postRequest);
-
-                /*Intent intent = new Intent(MainActivity.this, navigationDrawer.class);
-                startActivity(intent);*/
+                //insert();
+                Intent intent = new Intent(MainActivity.this, navigationDrawer.class);
+                startActivity(intent);
             }
         });
 
     }
+
+
 }
