@@ -78,7 +78,6 @@ public class loginActivity extends AppCompatActivity {
         final String password = mePassword.getText().toString().trim();
         Log.d("Tesasdast", email + " " + password);
         Log.d("Tesast", "I am here");
-
         /*if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Blank Field", Toast.LENGTH_LONG).show();
         } else {*/
