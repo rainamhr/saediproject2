@@ -59,7 +59,7 @@
         <EditText
             android:id="@+id/editText_firstName"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/text_firstName"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_edit_text"
@@ -80,7 +80,7 @@
         <EditText
             android:id="@+id/editText_lastName"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/text_lastName"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_edit_text"
@@ -100,7 +100,7 @@
         <EditText
             android:id="@+id/editText_phoneNo"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/text_phone_no"
             android:layout_marginTop="23dp"
             android:background="@drawable/rounded_edit_text"
@@ -120,7 +120,7 @@
         <EditText
             android:id="@+id/editText_address"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/text_Address"
             android:layout_marginTop="18dp"
             android:background="@drawable/rounded_edit_text"
@@ -131,7 +131,7 @@
         <EditText
             android:id="@+id/editText_city"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/editText_address"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_edit_text"

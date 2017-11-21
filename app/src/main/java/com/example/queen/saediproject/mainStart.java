@@ -15,5 +15,6 @@ public class mainStart extends AppCompatActivity {
 
         Intent intent = new Intent(this, ViewPagerActivity.class);
         startActivity(intent);
+        finish();
     }
 }

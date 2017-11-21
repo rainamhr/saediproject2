@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="60dp"
-    android:layout_marginRight="60dp"
+    android:layout_marginLeft="37dp"
+    android:layout_marginRight="37dp"
     tools:context="com.example.queen.saediproject.loginActivity">
 
     <ImageView
@@ -72,8 +78,7 @@
         <EditText
             android:id="@+id/editText_email"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="50dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="Type your email address"
             android:inputType="none"
@@ -91,8 +96,7 @@
         <EditText
             android:id="@+id/editText_password"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="Type your password"
             android:paddingLeft="20dp"
@@ -109,3 +113,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+</ScrollView>

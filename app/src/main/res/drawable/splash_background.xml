@@ -6,7 +6,6 @@
         android:drawable="@color/white" />
     <item>
         <bitmap android:src="@drawable/object"
-            android:tileMode="clamp"
             android:gravity="bottom"/>
     </item>
 </layer-list>
