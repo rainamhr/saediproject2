@@ -12,9 +12,24 @@ public class mainStart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_start);
+        /*Intent intent = new Intent(this, ViewPagerActivity.class);
+        startActivity(intent);
+        finish();*/
 
-        Intent intent = new Intent(this, ViewPagerActivity.class);
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    sleep(3000);
+                    Intent intent = new Intent(mainStart.this, ViewPagerActivity.class);
         startActivity(intent);
         finish();
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
     }
 }

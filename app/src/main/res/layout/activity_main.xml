@@ -44,7 +44,7 @@
             android:layout_centerHorizontal="true"
             android:text="CREATE YOUR PROFILE"
             android:textColor="@color/colorPurple"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -54,14 +54,13 @@
             android:layout_below="@+id/createAccount"
             android:layout_marginTop="16dp"
             android:text="First Name"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editText_firstName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_firstName"
-            android:layout_marginTop="15dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="First Name"
             android:inputType="none"
@@ -75,18 +74,17 @@
             android:layout_below="@id/editText_firstName"
             android:layout_marginTop="16dp"
             android:text="Last Name"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editText_lastName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_lastName"
-            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="Last Name"
             android:paddingLeft="20dp"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/text_phone_no"
@@ -95,18 +93,17 @@
             android:layout_below="@id/editText_lastName"
             android:layout_marginTop="16dp"
             android:text="Phone Number"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editText_phoneNo"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_phone_no"
-            android:layout_marginTop="23dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="Phone No."
             android:paddingLeft="20dp"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/text_Address"
@@ -115,25 +112,24 @@
             android:layout_below="@id/editText_phoneNo"
             android:layout_marginTop="16dp"
             android:text="Address"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editText_address"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/text_Address"
-            android:layout_marginTop="18dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="City"
             android:paddingLeft="20dp"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/editText_city"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/editText_address"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/rounded_edit_text"
             android:hint="Country"
             android:paddingLeft="20dp"
@@ -150,13 +146,24 @@
 
         <Button
             android:id="@+id/btn_createProfile"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/checkBox"
             android:background="@drawable/my_button"
             android:text="Create Profile"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btn_viewProfile"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/createAccount"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/my_button"
+            android:text="View"
             android:textColor="#fff" />
 
     </RelativeLayout>

@@ -4,8 +4,10 @@
    >
     <item
         android:drawable="@color/white" />
-    <item>
-        <bitmap android:src="@drawable/object"
-            android:gravity="bottom"/>
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:drawable="@drawable/vectodjectcopy"
+        android:gravity="center">
     </item>
 </layer-list>
