@@ -18,6 +18,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.queen.saediproject.Helper.DatabaseHelper;
@@ -68,87 +69,73 @@ public class loginActivity extends AppCompatActivity {
         mpassword.setTypeface(custom_font1);
         mbtnNextStep.setTypeface(custom_font1);
         Log.d("activity","here");
-        insertData();
-        //addData();
-    }
-
-    private void insertData() {
-        //PostCommentResponse.requestStarted();
-    /*    final String email = meEmail.getText().toString().trim();
-        final String password = mePassword.getText().toString().trim();*/
-
-       // Log.d("Tesasdast", email + " " + password);
-        Log.d("Tesast", "I am here");
-/*
-        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Blank Field", Toast.LENGTH_LONG).show();
-        } else {*/
-            // if (sharedPref.getInstance(this).getToken() != null) {
-            final StringRequest postRequest = new StringRequest(Request.Method.POST, URL,
-                    new Response.Listener<String>() {
-                        public void onResponse(String response) {
-                            Log.d("response", response);
-                           /* try {
-                                Log.d("Tesast", "I am here");
-                                JSONObject obj = new JSONObject(response);
-                                Log.d("enter", response);
-                                Toast.makeText(getApplicationContext(), obj.getString("username"), Toast.LENGTH_LONG).show();
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }*/
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(loginActivity.this, "error", Toast.LENGTH_LONG).show();
-                            Log.d("Error.Response", String.valueOf(error));
-                        }
-                    }
-            ) {
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
-                    String userEmail = meEmail.getText().toString();
-                    String userPassword = mePassword.getEditableText().toString();
-                    Log.e("DATA", "MAP");
-                    //params.put("token", sharedPref.getInstance(getApplicationContext()).getToken());
-                    params.put("username", userEmail);
-                    params.put("password ", userPassword);
-
-                    return params;
-                }
-
-                @Override
-                public Map<String, String> getHeaders() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("Content-Type", "application/x-www-form-urlencoded");
-                    return params;
-                }
-            };
-            requestQueue.add(postRequest);
-        }
-    /*else {
-                Toast.makeText(this, "Token not generated", Toast.LENGTH_LONG).show();
-            }*/
-
-
-    public void addData(){
         mbtnNextStep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(loginActivity.this,MainActivity.class);
-                startActivity(intent);
-               boolean isInserted =  databaseHelper.addData(meEmail.getText().toString(),
-                       mePassword.getText().toString());
-               if (isInserted == true)
-                   Toast.makeText(loginActivity.this,"successful",Toast.LENGTH_LONG).show();
-               else{
-                   Toast.makeText(loginActivity.this,"failed",Toast.LENGTH_LONG).show();
-
-               }
+                insertData();
+                addData();
             }
         });
     }
+
+    private void insertData() {
+        final String email = meEmail.getText().toString().trim();
+        final String password = mePassword.getText().toString().trim();
+        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "Blank Field", Toast.LENGTH_LONG).show();
+            Log.d("clickccc", "clickclick");
+        } else {
+            SharedPreferences pref = getApplicationContext().getSharedPreferences("sharedPref", MODE_PRIVATE);
+            String regId = pref.getString("regId", null);
+            Log.e("token", "reg id: " + regId);
+
+           // if (sharedPref.getInstance(this).getToken() == null) {
+                Map<String, String> postParam = new HashMap<String, String>();
+                postParam.put("username", "codemin");
+                postParam.put("password", "admin@123");
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, URL, new JSONObject(postParam),
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+                                    Toast.makeText(getApplicationContext(), response.getString("username"), Toast.LENGTH_LONG).show();
+                                    meEmail.setText(response.getString("username"));
+                                    mePassword.setText(response.getString("password"));
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(loginActivity.this, "error", Toast.LENGTH_LONG).show();
+                        Log.d("Error.Response", String.valueOf(error));
+                    }
+                });
+
+                requestQueue.add(jsonObjectRequest);
+
+            } /*else {
+                Toast.makeText(this, "Token not generated", Toast.LENGTH_LONG).show();
+            }
+        }*/
+    }
+
+    //adding data in sqlite
+    public void addData(){
+        Intent intent = new Intent(loginActivity.this,MainActivity.class);
+        startActivity(intent);
+        boolean isInserted =  databaseHelper.addData(meEmail.getText().toString(),
+                mePassword.getText().toString());
+        if (isInserted == true)
+            Toast.makeText(loginActivity.this,"successful",Toast.LENGTH_LONG).show();
+        else{
+            Toast.makeText(loginActivity.this,"failed",Toast.LENGTH_LONG).show();
+        }
+    }
+
+   /* public void addToken(){
+        boolean isInserted = databaseHelper.addToken(token.)
+    }*/
 }

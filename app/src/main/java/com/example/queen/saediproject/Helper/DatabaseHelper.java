@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.security.PublicKey;
+
 /**
  * Created by queen on 11/20/17.
  */
@@ -15,9 +17,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DATABASE_NAME = "Users";
     private static String TABLE_NAME1 = "user";
     private static String TABLE_NAME2 = "userProfile";
+    private static String TABLE_TOKEN = "token";
     private static int version = 1;
     private String createUserTable = "CREATE TABLE if not exists `user` (  `id` INTEGER PRIMARY KEY AUTOINCREMENT ,`email` TEXT, `password` TEXT)";
     private String createProfileTable = "CREATE TABLE if not exists `userProfile` ( `fName` TEXT, `lName` TEXT, `phone` TEXT, `address1` TEXT, `address2` TEXT)";
+  //  private String createToken = "CREATE TABLE if not exists `token` (`token` TEXT`)";
 
     private static final String Col0 = "id";
     private static final String Col1 = "email";
@@ -27,23 +31,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String Col5 = "address1";
     private static final String Col6 = "address2";
     private static final String Col7 = "phone";
+  //  private static final String Col8 = "token";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME , null, version);
         getWritableDatabase().execSQL(createUserTable);
         getWritableDatabase().execSQL(createProfileTable);
+     //   getWritableDatabase().execSQL(createToken);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE if not exists `userProfile` ( `fName` TEXT, `lName` TEXT, `phone` TEXT, `address1` TEXT, `address2` TEXT)");
         sqLiteDatabase.execSQL("CREATE TABLE if not exists `user` (  `id` INTEGER PRIMARY KEY AUTOINCREMENT ,`email` TEXT, `password` TEXT)");
+       // sqLiteDatabase.execSQL("CREATE TABLE if not exists `token` ( `token` TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP IF TABLE EXISTS" +TABLE_NAME1);
         sqLiteDatabase.execSQL("DROP IF TABLE EXISTS" +TABLE_NAME2);
+        //sqLiteDatabase.execSQL("DROP IF TABLE EXISTS" +TABLE_TOKEN);
         onCreate(sqLiteDatabase);
     }
 
@@ -72,6 +80,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(Col7,phone);
         long result = db.insert(TABLE_NAME2,null,cv);
 
+        if (result==-1){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    public boolean addToken(String token){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues cv = new ContentValues();
+       // cv.put(Col8,token);
+        long result = db.insert(TABLE_TOKEN,null,cv);
         if (result==-1){
             return false;
         }else {
